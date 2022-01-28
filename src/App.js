@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import "./App.css";
 import intializeAuthentication from "./firebase/firebase.init";
-intializeAuthentication()
+intializeAuthentication();
 
 function App() {
   const nameRef = useRef();
@@ -13,7 +13,7 @@ function App() {
 
     const newUser = { name, email };
 
-    fetch("http://localhost:5000/users", {
+    fetch("https://guarded-refuge-15901.herokuapp.com/users", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -70,10 +70,6 @@ function App() {
     </>
   );
 }
-
-
-
-
 
 //   return (
 //     <div>
