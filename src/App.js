@@ -32,13 +32,14 @@ function App() {
 
   return (
     <>
-      <div className="h1">
+      {/* <div className="h1">
         <h1 className="h">facebook</h1>
         <p className="pr">
           Facebook helps you connect and share with the people in your life.
         </p>
-      </div>
+      </div> */}
       <form className="main" onSubmit={handleAddUser}>
+        <h3 className="fb">facebook</h3>
         <input
           type="text"
           placeholder="Email address or phone number"
@@ -66,21 +67,27 @@ function App() {
             Create New Account
           </a>
         </div>
+
+        <div className="language-main">
+          <div>
+            <h6 className="language">English (UK)</h6>
+            <h6 className="language">অসমীয়া</h6>
+            <h6 className="language">नेपाली</h6>
+            <h6 className="language">Português (Brasil)</h6>
+          </div>
+          <div>
+            <h6 className="language">বাংলা</h6>
+            <h6 className="language">हिन्दी</h6>
+            <h6 className="language">Español</h6>
+          </div>
+        </div>
+
+        <div>
+          <h6 className="inc">Facebook Inc.</h6>
+        </div>
       </form>
     </>
   );
 }
-
-//   return (
-//     <div>
-//       <h2>Please Add an User</h2>
-//       <form onSubmit={handleAddUser}>
-//         <input type="text" ref={nameRef} />
-//         <input type="text" name="" id="" ref={emailRef} />
-//         <input type="submit" value="Add" />
-//       </form>
-//     </div>
-//   );
-// }
 
 export default App;
